@@ -1,0 +1,15 @@
+<label>Enter Username:</label>
+<div>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (input)="onUsernameUpdate($event)"
+  />
+
+<p> {{ username }} </p>
+</div>
+<button
+  class=btn button-primary
+  [disabled]="isUsernameEmpty"
+  (click)="clearUsername()">Clear</button>
